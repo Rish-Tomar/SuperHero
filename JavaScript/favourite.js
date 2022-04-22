@@ -24,7 +24,6 @@ function fetchFavs(){
     }
 
     //rendering html to show favourites
-     // list.innerHTML=""
 
      arr.forEach(ele=>{
 
@@ -37,7 +36,7 @@ function fetchFavs(){
 			var image=json_response.image.url
 			var name=json_response.name
 
-			//creating a html element and rendering
+			//creating  html element and rendering
 			var li=document.createElement('li')
 			li.classList.add('fav-list-item')
 			li.innerHTML=`<div><h4>${name}</h4>
@@ -69,8 +68,6 @@ function removeFav(id){
 	console.log(arr)
 	alert('removed!!, click on show Favourites')
 	location.assign('./fav.html')
-
-
 }
 
 
