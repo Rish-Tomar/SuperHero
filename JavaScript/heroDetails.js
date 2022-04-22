@@ -1,12 +1,15 @@
+
+// fetching html elements and saving into a variable
 const item = document.querySelector('hero-details-div')
 const name= document.getElementById('name')
 const gender = document.getElementById('gender')
 const powerstats = document.getElementById('powerstats')
 const bio = document.getElementById('bio')
 
-function fetchDetails(){
-	var xhrRequest = new XMLHttpRequest();
 
+function fetchDetails(){
+	
+	var xhrRequest = new XMLHttpRequest();
 
 	xhrRequest.onreadystatechange = function(){
 		if(this.readyState== 4)
@@ -14,10 +17,11 @@ function fetchDetails(){
 			//converting recieved response to JSON format
 			var responseJson=JSON.parse(xhrRequest.response)
 			console.log(responseJson)
-
+             
 			const imgsrc=responseJson.image.url
             $('#bttn').remove()
 			//showing the results in html file
+			
 			//image 
 			 $('#img-src').attr('src',imgsrc)
 
