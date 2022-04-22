@@ -1,0 +1,44 @@
+
+body{
+	background-color: lightcyan;
+}
+.main-div{
+	margin: auto;
+	width: 50%;
+	margin-top: 15px;
+	
+}
+#header{
+	font-size: 30px;
+	font-family: sans-serif;
+	color: rgb(175, 25, 25);
+	text-align: center;
+	border-bottom: 5px solid black;
+	margin-bottom: 5px;
+}
+
+#details-div{
+	display: flex;
+	justify-content: space-between;
+}
+
+.hero-details{
+	display: flex;
+	flex-direction: row;
+	width: 80%;
+	margin: auto;
+}
+#image-div{
+	width: 30%;
+}
+
+#img-src{
+	width: 60%;
+	height: 80%;
+	margin-left: 25%
+}
+
+#hero-details-div ul li {
+	list-style-type: none;
+	padding: 5px;
+}
