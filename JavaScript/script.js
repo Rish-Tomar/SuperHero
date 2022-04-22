@@ -31,11 +31,10 @@ function fetchHerosResults(){
 
                            
 
-                            //for each hero searh results showing name image and id using html syntax
+                            //for each hero searh results 
                             response_in_JSON.results.forEach(hero =>{
                               var imgsrc=hero.image.url
-
-                              console.log("show",heroJson)
+                              
                               // console.log(hero)
                               var li = document.createElement("li")
                               li.classList.add('search-item')
@@ -55,6 +54,14 @@ function fetchHerosResults(){
                               searchresults.appendChild(li)
                               console.log(imgsrc)
                               })
+
+
+                            // adding the event listener on search results 
+
+
+
+                            let searchedHeroResults =document.getElementsByClassName('search-item')
+
                             
       }
 
@@ -81,4 +88,10 @@ function fetchHerosResults(){
                                 oldfavourites.push(hero)
                               }
                               localStorage.setItem('favSelected',oldfavourites)
+                              // location.assign('./fav.html')
                             }
+//     )
+// }
+
+
+// $('#submit-button').click(fetchHerosResults);
