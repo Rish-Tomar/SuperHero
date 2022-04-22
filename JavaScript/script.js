@@ -11,6 +11,8 @@ function fetchHerosResults(){
 
     	var searchvalue=this.value
     	console.log(searchvalue)
+
+      //checking if length less then 3 then do nothing
     	if(searchItem.length<3)
     	{
     		return
@@ -21,21 +23,22 @@ function fetchHerosResults(){
       requestUrl+searchvalue     
       xhrRequest.onload= function ()
                           {
+                            //converting response to json
     	                      var response_in_JSON=JSON.parse(xhrRequest.response)
-                            console.log("this one ",response_in_JSON)
-
                             var searchresults=document.getElementById('display-results')
 
                             //clear previous results
                             searchresults.innerHTML=""
 
-                           
-
                             //for each hero searh results 
                             response_in_JSON.results.forEach(hero =>{
                               var imgsrc=hero.image.url
+                              
+                              //creating a html element 'li' and defining its class
                               var li = document.createElement("li")
                               li.classList.add('search-item')
+
+                              //writing html code using javascript
                               li.innerHTML=` <img id=display-results-img src="${imgsrc} "/>
                                              <h4>${hero.name}</h4>
                                              <h4 name="${hero.id}">${hero.id}</h4>
@@ -77,5 +80,5 @@ function fetchHerosResults(){
                                 oldfavourites.push(hero)
                               }
                               localStorage.setItem('favSelected',oldfavourites)
-                             
+                              // location.assign('./fav.html')
                             }
