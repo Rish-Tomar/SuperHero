@@ -29,17 +29,17 @@ function fetchDetails(){
 			gender.innerHTML=`${responseJson.appearance.gender}`
 			//showing powerstats
 			powerstats.innerHTML=`<ol>
-			                           <li>Intelligence :${responseJson.powerstats.intelligence} </li>
-			                           <li>Speed        :${responseJson.powerstats.speed} </li>
-			                           <li>Durability   :${responseJson.powerstats.durability}  </li>
-			                           <li>Strength     :${responseJson.powerstats.strength}</li>
-			                           <li>Power        :${responseJson.powerstats.power}</li>
+			                           <li><u>Intelligence</u> :${responseJson.powerstats.intelligence} </li>
+			                           <li><u>Speed       </u> :${responseJson.powerstats.speed} </li>
+			                           <li><u>Durability  </u>:${responseJson.powerstats.durability}  </li>
+			                           <li><u>Strength    </u> :${responseJson.powerstats.strength}</li>
+			                           <li><u>Power       </u>:${responseJson.powerstats.power}</li>
 			                      </ol>`
 			bio.innerHTML=`<ol>
-			                   <li>Work        :${responseJson.work.occupation}</li>
-			                   <li>Aliases     :${responseJson.biography.aliases}
-			                   <li>Publisher   :${responseJson.biography.publisher}
-			                   <li>Birth place :${responseJson.biography['place-of-birth']}`
+			                   <li><u>Work</u>        :${responseJson.work.occupation}</li>
+			                   <li><u>Aliases</u>     :${responseJson.biography.aliases}
+			                   <li><u>Publisher </u>  :${responseJson.biography.publisher}
+			                   <li><u>Birth place</u> :${responseJson.biography['place-of-birth']}`
 
 		}
 		
