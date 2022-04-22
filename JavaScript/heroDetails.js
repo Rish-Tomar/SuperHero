@@ -2,6 +2,8 @@ const item = document.querySelector('hero-details-div')
 const name= document.getElementById('name')
 const gender = document.getElementById('gender')
 const powerstats = document.getElementById('powerstats')
+const bio = document.getElementById('bio')
+
 function fetchDetails(){
 	var xhrRequest = new XMLHttpRequest();
 
@@ -11,7 +13,7 @@ function fetchDetails(){
 		{
 			//converting recieved response to JSON format
 			var responseJson=JSON.parse(xhrRequest.response)
-			// console.log(responseJson)
+			console.log(responseJson)
 
 			const imgsrc=responseJson.image.url
             $('#bttn').remove()
@@ -33,6 +35,11 @@ function fetchDetails(){
 			                           <li>Strength     :${responseJson.powerstats.strength}</li>
 			                           <li>Power        :${responseJson.powerstats.power}</li>
 			                      </ol>`
+			bio.innerHTML=`<ol>
+			                   <li>Work        :${responseJson.work.occupation}</li>
+			                   <li>Aliases     :${responseJson.biography.aliases}
+			                   <li>Publisher   :${responseJson.biography.publisher}
+			                   <li>Birth place :${responseJson.biography['place-of-birth']}`
 
 		}
 		
